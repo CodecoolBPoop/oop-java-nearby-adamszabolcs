@@ -9,25 +9,11 @@ class Nearby {
             {321, 320, 32, 3, 41241, -11, -12, -13, -66, -688}
     };
 
-    public int getX() {
-        Scanner scanX = new Scanner(System.in);
-        System.out.println("Enter X coordinate: ");
-        int x = scanX.nextInt();
+    public int getNumber() {
+        Scanner scanInput = new Scanner(System.in);
+        System.out.println("Enter number: ");
+        int x = scanInput.nextInt();
         return x;
-    }
-
-    public int getY() {
-        Scanner scanY = new Scanner(System.in);
-        System.out.println("Enter Y coordinate: ");
-        int y = scanY.nextInt();
-        return y;
-    }
-
-    public int getRange() {
-        Scanner scanRange = new Scanner(System.in);
-        System.out.println("Enter range: ");
-        int range = scanRange.nextInt();
-        return range;
     }
 
 
@@ -66,9 +52,9 @@ class Nearby {
 
     public static void main(String[] args) {
         Nearby array = new Nearby();
-        int x = array.getX();
-        int y = array.getY();
-        int range = array.getRange();
+        int x = array.getNumber();
+        int y = array.getNumber();
+        int range = array.getNumber();
         int[] result = array.nearby(x, y, range);
         System.out.println(Arrays.toString(result));
     }
